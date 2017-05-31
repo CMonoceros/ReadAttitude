@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/m"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ModuleNewsAppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/module_news_tb_list"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ModuleNewsAppTheme.PopupOverlay"
+                app:title="@string/module_news_app_name"
+                app:titleTextColor="@color/colorWhite">
+
+            </android.support.v7.widget.Toolbar>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/module_news_iv_channel_add"
+                    android:layout_width="@dimen/module_news_iv_channel_add_height"
+                    android:layout_height="@dimen/module_news_iv_channel_add_height"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/module_news_padding_medium"
+                    android:src="@drawable/module_news_ic_tab_add" />
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/module_news_tl_news_channel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/module_news_iv_channel_add"
+                    app:tabTextColor="@color/colorWhite"></android.support.design.widget.TabLayout>
+
+            </RelativeLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/module_news_vp_news_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        </android.support.v4.view.ViewPager>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/module_news_fab_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/module_news_margin_big"
+            android:src="@drawable/module_news_ic_float_button_up"
+            app:layout_behavior="zjm.cst.dhu.library.utils.FloatingActionButtonBehavior"
+            android:layout_gravity="bottom|end" />
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

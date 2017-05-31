@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="news_channel_list_name">
+        <item>头条</item>
+        <item>娱乐</item>
+        <item>体育</item>
+        <item>财经</item>
+        <item>科技</item>
+        <item>政务</item>
+        <item>公开课</item>
+        <item>轻松一刻</item>
+        <item>游戏</item>
+        <item>社会</item>
+        <item>读书</item>
+        <item>原创</item>
+        <item>NBA</item>
+        <item>画报</item>
+        <item>历史</item>
+        <item>军事</item>
+        <item>影视</item>
+        <item>中国足球</item>
+        <item>国际足球</item>
+        <item>CBA</item>
+        <item>跑步</item>
+        <item>手机</item>
+        <item>数码</item>
+        <item>移动互联</item>
+        <item>汽车</item>
+        <item>家居</item>
+        <item>旅游</item>
+        <item>健康</item>
+        <item>酒香</item>
+        <item>教育</item>
+        <item>亲子</item>
+        <item>葡萄酒</item>
+        <item>暴雪游戏</item>
+        <item>时尚</item>
+        <item>情感</item>
+        <item>房产</item>
+        <item>值得买</item>
+        <item>跟帖</item>
+    </string-array>
+
+    <string-array name="news_channel_list_id">
+        <item>T1348647853363</item>
+        <item>T1348648517839</item>
+        <item>T1348649079062</item>
+        <item>T1348648756099</item>
+        <item>T1348649580692</item>
+        <item>T1414142214384</item>
+        <item>T1421997195219</item>
+        <item>T1350383429665</item>
+        <item>T1348654151579</item>
+        <item>T1348648037603</item>
+        <item>T1401272877187</item>
+        <item>T1370583240249</item>
+        <item>T1348649145984</item>
+        <item>T1422935072191</item>
+        <item>T1368497029546</item>
+        <item>T1348648141035</item>
+        <item>T1348648650048</item>
+        <item>T1348649503389</item>
+        <item>T1348649176279</item>
+        <item>T1348649475931</item>
+        <item>T1411113472760</item>
+        <item>T1348649654285</item>
+        <item>T1348649776727</item>
+        <item>T1351233117091</item>
+        <item>T1348654060988</item>
+        <item>T1348654105308</item>
+        <item>T1348654204705</item>
+        <item>T1414389941036</item>
+        <item>T1385429690972</item>
+        <item>T1348654225495</item>
+        <item>T1397116135282</item>
+        <item>T1402031665628</item>
+        <item>T1397016069906</item>
+        <item>T1348650593803</item>
+        <item>T1348650839000</item>
+        <item>5rex5Zyz</item>
+        <item>T1420771091297</item>
+        <item>T1419315959525</item>
+    </string-array>
+
+    <string-array name="news_channel_list_type">
+        <item>headline</item>
+        <item>house</item>
+        <item>list</item>
+    </string-array>
+
+</resources>

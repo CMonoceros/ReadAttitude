@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="isVisibility"
+            type="Boolean"/>
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="@{isVisibility?View.VISIBLE:View.GONE}"
+        android:padding="@dimen/module_news_padding_medium">
+
+        <ProgressBar
+            android:id="@+id/module_news_pb_footer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/module_news_pb_footer"
+            android:paddingLeft="@dimen/module_news_padding_medium"
+            android:text="@string/module_news_reload_footer"
+            android:textColor="@color/module_news_colorBlackDark"
+            android:textSize="@dimen/module_news_big_fonts" />
+
+    </RelativeLayout>
+</layout>

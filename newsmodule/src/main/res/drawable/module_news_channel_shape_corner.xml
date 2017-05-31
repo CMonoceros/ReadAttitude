@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/module_news_channel_shape_corner_radius" />
+    <solid android:color="@color/module_news_colorGreyLight" />
+    <stroke android:color="@color/module_news_colorBlackLight"
+        android:width="@dimen/module_news_channel_shape_stroke_width"/>
+</shape>

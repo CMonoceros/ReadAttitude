@@ -1,0 +1,10 @@
+<resources>
+    <string name="module_news_app_name">Read Attitude</string>
+    <string name="module_news_reload_list">Click and reload</string>
+    <string name="module_news_reload_footer">Loading</string>
+    <string name="module_news_channel_manage_tittle">Channels Manage</string>
+    <string name="module_news_channel_switch">Switch channels</string>
+    <string name="module_news_channel_explain">Long touch to sort or delete</string>
+    <string name="module_news_channel_add">Click to add more channels</string>
+    <string name="module_news_menu_bar_upload_crash">Send Crash Log</string>
+</resources>

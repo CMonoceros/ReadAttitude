@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="module_news_colorPrimary">#63B8FF</color>
+    <color name="module_news_colorPrimaryDark">#4F94CD</color>
+    <color name="module_news_colorAccent">#FF4081</color>
+
+    <color name="module_news_colorWhite">#FFFFFF</color>
+    <color name="module_news_colorNavy">#76EEC6</color>
+    <color name="module_news_colorGrey">#C2C2C2</color>
+    <color name="module_news_colorGreyLight">#EAEAEA</color>
+    <color name="module_news_colorGreyDark">#A8A8A8</color>
+    <color name="module_news_colorBlackLightMore">#8A8A8A</color>
+    <color name="module_news_colorBlackLight">#404040</color>
+    <color name="module_news_colorBlackDark">#000000</color>
+</resources>

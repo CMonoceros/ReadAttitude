@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+
+        <variable
+            name="isLoading"
+            type="Boolean" />
+
+        <variable
+            name="isSuccess"
+            type="Boolean" />
+
+        <variable
+            name="reloadClickListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/module_news_cl_inf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/module_news_abl_inf"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/module_news_inf_appbar_height"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/module_news_ctl_inf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleMarginEnd="@dimen/module_news_inf_tittle_margin"
+                app:expandedTitleMarginStart="@dimen/module_news_inf_tittle_margin"
+                app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <ImageView
+                    android:id="@+id/module_news_iv_news_inf"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.7" />
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/module_news_tb_inf"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:navigationIcon="@drawable/module_news_ic_back"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                </android.support.v7.widget.Toolbar>
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/module_news_padding_big">
+
+                <TextView
+                    android:id="@+id/module_news_tv_news_inf_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/module_news_colorBlackLightMore"
+                    android:textSize="@dimen/module_news_medium_fonts" />
+
+                <TextView
+                    android:id="@+id/module_news_tv_news_inf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/module_news_tv_news_inf_date"
+                    android:layout_marginTop="@dimen/module_news_margin_medium"
+                    android:lineSpacingExtra="@dimen/module_news_line_space"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/module_news_colorBlackDark"
+                    android:textSize="@dimen/module_news_big_fonts" />
+
+                <ImageView
+                    android:id="@+id/module_news_iv_news_inf_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/module_news_inf_reload_margin"
+                    android:padding="@dimen/module_news_padding_medium"
+                    android:src="@drawable/module_news_ic_news_empty"
+                    android:visibility="@{isSuccess?View.GONE:View.VISIBLE}" />
+
+                <TextView
+                    android:id="@+id/module_news_tv_news_inf_empty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/module_news_iv_news_inf_empty"
+                    android:layout_centerHorizontal="true"
+                    android:clickable="true"
+                    android:text="@string/module_news_reload_list"
+                    android:onClick="@{reloadClickListener}"
+                    android:textColor="@color/module_news_colorGreyDark"
+                    android:textSize="@dimen/module_news_big_fonts"
+                    android:visibility="@{isSuccess?View.GONE:View.VISIBLE}" />
+
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/module_news_inf_pb_margin"
+                    android:visibility="@{isLoading?View.VISIBLE:View.GONE}" />
+
+            </RelativeLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/module_news_fab_inf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/module_news_margin_big"
+            android:src="@drawable/module_news_ic_share"
+            android:visibility="@{isSuccess?View.VISIBLE:View.GONE}"
+            app:layout_anchor="@id/module_news_abl_inf"
+            app:layout_anchorGravity="bottom|end" />
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

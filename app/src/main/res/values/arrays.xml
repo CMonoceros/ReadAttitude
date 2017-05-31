@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tab_item_tittle">
+        <item>
+            News
+        </item>
+        <item>
+            User
+        </item>
+    </string-array>
+
+    <integer-array name="tab_item_resource_id">
+        <item>@drawable/item_tab_news</item>
+        <item>@drawable/item_tab_user</item>
+    </integer-array>
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="module_news_iv_channel_add_height">50dp</dimen>
+
+    <dimen name="module_news_padding_medium">8dp</dimen>
+
+    <dimen name="module_news_padding_big">15dp</dimen>
+
+    <dimen name="module_news_padding_small">3dp</dimen>
+
+    <dimen name="module_news_big_fonts">18sp</dimen>
+
+    <dimen name="module_news_medium_fonts">14sp</dimen>
+
+    <dimen name="module_news_mediumlight_fonts">12sp</dimen>
+
+    <dimen name="module_news_margin_medium">8dp</dimen>
+
+    <dimen name="module_news_margin_big">16dp</dimen>
+
+    <dimen name="module_news_line_space">6dp</dimen>
+
+    <dimen name="module_news_cardview_margin">4dp</dimen>
+
+    <dimen name="module_news_cardview_margin_top">5dp</dimen>
+
+    <dimen name="module_news_cardview_elevation">2dp</dimen>
+
+    <dimen name="module_news_cardview_image_size">72dp</dimen>
+
+    <dimen name="module_news_viewpaper_ads_height">222dp</dimen>
+
+    <dimen name="module_news_guide_shape_width">20dp</dimen>
+
+    <dimen name="module_news_guide_shape_height">5dp</dimen>
+
+    <dimen name="module_news_channel_shape_corner_radius">5dp</dimen>
+
+    <dimen name="module_news_channel_shape_stroke_width">1dp</dimen>
+
+    <dimen name="module_news_inf_appbar_height">256dp</dimen>
+
+    <dimen name="module_news_inf_tittle_margin">24dp</dimen>
+
+    <dimen name="module_news_inf_pb_margin">200dp</dimen>
+
+    <dimen name="module_news_inf_reload_margin">130dp</dimen>
+</resources>

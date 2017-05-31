@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="isManage"
+            type="Boolean" />
+
+        <variable
+            name="channel"
+            type="zjm.cst.dhu.library.mvp.model.NewsChannel" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/module_news_rl_channel_like"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/module_news_tv_channel_manage_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/module_news_padding_small"
+            android:layout_margin="@dimen/module_news_margin_medium"
+            android:background="@drawable/module_news_channel_shape_corner"
+            android:gravity="center"
+            android:text="@{channel.channelName}"
+            android:textColor="@color/module_news_colorBlackDark"
+            android:textSize="@dimen/module_news_big_fonts">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/module_news_iv_channel_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/module_news_padding_small"
+            android:paddingTop="@dimen/module_news_padding_small"
+            android:src="@drawable/module_news_ic_channel_delete"
+            android:visibility="@{isManage?View.VISIBLE:View.GONE}" />
+
+
+    </RelativeLayout>
+
+</layout>

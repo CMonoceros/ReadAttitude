@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_medium">8dp</dimen>
+
+    <dimen name="padding_small">3dp</dimen>
+
+    <dimen name="corner_radius_medium">20dp</dimen>
+
+    <dimen name="guide_button_margin_bottom">80dp</dimen>
+
+    <dimen name="tablayout_height">50dp</dimen>
+    
+    <dimen name="tablayout_indicator_height">0dp</dimen>
+
+    <dimen name="tab_item_image_size">30dp</dimen>
+
+    <dimen name="guide_shape_width">20dp</dimen>
+
+    <dimen name="guide_shape_height">5dp</dimen>
+</resources>

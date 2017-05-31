@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="loadSuccess"
+            type="Boolean" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/module_news_rl_news_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/module_news_srl_news_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/module_news_rv_news_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/module_news_colorGreyLight"
+                android:visibility="@{loadSuccess?View.VISIBLE:View.GONE}" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <ImageView
+            android:id="@+id/module_news_iv_news_list_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/module_news_padding_medium"
+            android:src="@drawable/module_news_ic_news_empty"
+            android:visibility="@{loadSuccess?View.GONE:View.VISIBLE}" />
+
+        <TextView
+            android:id="@+id/module_news_tv_news_list_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/module_news_iv_news_list_empty"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:text="@string/module_news_reload_list"
+            android:textColor="@color/module_news_colorGreyDark"
+            android:textSize="@dimen/module_news_big_fonts"
+            android:visibility="@{loadSuccess?View.GONE:View.VISIBLE}" />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="channel"
+            type="zjm.cst.dhu.library.mvp.model.NewsChannel" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{onClick}">
+
+        <TextView
+            android:id="@+id/module_news_tv_channel_manage_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/module_news_margin_medium"
+            android:background="@drawable/module_news_channel_shape_corner"
+            android:gravity="center"
+            android:padding="@dimen/module_news_padding_small"
+            android:text="@{channel.channelName}"
+            android:textColor="@color/module_news_colorBlackDark"
+            android:textSize="@dimen/module_news_big_fonts">
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+</layout>

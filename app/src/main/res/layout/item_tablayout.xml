@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="isSelected"
+            type="Boolean" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tablayout_height"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_tab_item"
+            android:layout_width="@dimen/tab_item_image_size"
+            android:layout_height="@dimen/tab_item_image_size"
+            android:paddingTop="@dimen/padding_small" />
+
+        <TextView
+            android:id="@+id/tv_tab_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_tab_item"
+            android:paddingBottom="@dimen/padding_small"
+            android:textColor="@{isSelected?@color/colorAccent:@color/colorPrimary}" />
+    </RelativeLayout>
+</layout>
