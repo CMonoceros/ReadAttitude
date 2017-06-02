@@ -1,17 +1,37 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+
+    ext.buildtools_version='25.0.2'
+    ext.version='1.0'
+    ext.application_id='zjm.cst.dhu.zjm.cst.dhu.readattitude'
+
+    ext.kotlin_version = '1.1.2-2'
+    ext.gradle_version='2.3.1'
+    ext.dagger_version='2.4'
+    ext.greendao_version='3.2.2'
+    ext.javax_annotation_version='10.0-b28'
+    ext.appcompat_v7_version='25.0.0'
+    ext.leakcanary_version='1.5'
+    ext.junit_version='4.12'
+    ext.okhttp_version='3.6.0'
+    ext.retrofit_version='2.2.0'
+    ext.gson_version='2.8.0'
+    ext.rxjava_version='1.0.14'
+    ext.rxandroid_version='1.0.1'
+    ext.espresso_version='2.2.2'
+    ext.cardview_v7_version='25.0.0'
+    ext.glide_version='3.7.0'
+    ext.sqlcipher_version='3.5.7'
+
     repositories {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.1'
+        classpath "com.android.tools.build:gradle:$gradle_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.greenrobot:greendao-gradle-plugin:$greendao_version"
 
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
-
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.1.2'
     }
 
 }

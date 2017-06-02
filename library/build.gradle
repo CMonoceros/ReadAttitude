@@ -1,16 +1,17 @@
 apply plugin: 'com.android.library'
 apply plugin: 'org.greenrobot.greendao'
 apply plugin: 'kotlin-android'
+apply plugin: "kotlin-kapt"
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion "$buildtools_version"
 
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName "$version"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -30,48 +31,43 @@ android {
     dataBinding {
         enabled = true
     }
-
-    kapt {
-        generateStubs = true
-    }
 }
 
 dependencies {
-
-    compile "org.jetbrains.kotlin:kotlin-stdlib:1.1.2"
-    compile "org.jetbrains.kotlin:kotlin-reflect:1.1.2"
-    testCompile "org.jetbrains.kotlin:kotlin-test:1.1.2"
-    testCompile "org.jetbrains.kotlin:kotlin-test-junit:1.1.2"
-    kapt "com.android.databinding:compiler:2.3.1"
-    kapt 'com.google.dagger:dagger:2.0'
-    kapt 'com.google.dagger:dagger-compiler:2.0'
-
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+
+    androidTestCompile("com.android.support.test.espresso:espresso-core:$espresso_version", {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.0.0'
-    compile 'com.android.support:design:25.0.0'
-    testCompile 'junit:junit:4.12'
+    testCompile "junit:junit:$junit_version"
 
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
-    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
-    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
-    compile 'com.google.dagger:dagger:2.0'
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.0'
-    provided 'org.glassfish:javax.annotation:10.0-b28'
+    compile "com.android.support:appcompat-v7:$appcompat_v7_version"
+    compile "com.android.support:design:$appcompat_v7_version"
 
-    compile 'com.squareup.okhttp3:okhttp:3.6.0'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
-    compile 'com.squareup.retrofit2:retrofit:2.2.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.+'
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.+'
+    debugCompile "com.squareup.leakcanary:leakcanary-android:$leakcanary_version"
+    releaseCompile "com.squareup.leakcanary:leakcanary-android-no-op:$leakcanary_version"
+    testCompile "com.squareup.leakcanary:leakcanary-android-no-op:$leakcanary_version"
 
-    compile 'com.google.code.gson:gson:2.8.0'
+    kapt "com.android.databinding:compiler:$gradle_version"
 
-    compile 'io.reactivex:rxjava:1.0.14'
-    compile 'io.reactivex:rxandroid:1.0.1'
+    compile "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    provided "org.glassfish:javax.annotation:$javax_annotation_version"
 
-    compile 'org.greenrobot:greendao:3.2.2'
+    compile "com.squareup.okhttp3:okhttp:$okhttp_version"
+    compile "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+
+    compile "com.squareup.retrofit2:retrofit:$retrofit_version"
+    compile "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    compile "com.squareup.retrofit2:adapter-rxjava:$retrofit_version"
+
+    compile "com.google.code.gson:gson:$gson_version"
+
+    compile "io.reactivex:rxjava:$rxjava_version"
+    compile "io.reactivex:rxandroid:$rxandroid_version"
+
+    compile "org.greenrobot:greendao:$greendao_version"
+    compile "net.zetetic:android-database-sqlcipher:$sqlcipher_version@aar"
 }

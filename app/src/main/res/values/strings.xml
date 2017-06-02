@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">ReadAttitude</string>
 
+    <string name="app_name_component">ReadAttitude-AppModule</string>
+
     <string name="guide_start">Start</string>
 </resources>

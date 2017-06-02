@@ -1,5 +1,5 @@
 <resources>
-    <string name="module_news_app_name">Read Attitude</string>
+    <string name="module_news_app_name">ReadAttitude-NewsModule</string>
     <string name="module_news_reload_list">Click and reload</string>
     <string name="module_news_reload_footer">Loading</string>
     <string name="module_news_channel_manage_tittle">Channels Manage</string>

@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/ModuleNewsAppTheme">
 
-        <activity android:name=".mvp.ui.activity.test.TestActivity">
+        <activity android:name=".mvp.ui.activity.TestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
